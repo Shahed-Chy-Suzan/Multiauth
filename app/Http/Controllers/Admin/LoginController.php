@@ -40,12 +40,11 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        //  if (Auth::id()) {
-        //      return redirect()->back();
-        //  }else{
+        if (Auth::id()) {
+            return redirect()->back();
+        }else{
             return view('admin.auth.login');
-
-        // }
+        }
 
     }
 
